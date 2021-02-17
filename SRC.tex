@@ -1,0 +1,88 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[danish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage{siunitx}
+\usepackage{hyperref}
+\hypersetup{%
+	pdfborder = {0 0 0}
+}
+
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+\renewcommand{\baselinestretch}{1.5}
+
+
+\author{Christian Kaae Larsen}
+\begin{document}
+	\tableofcontents
+	\section{Termodynamiske processor og kredsprocessor}
+		\subsection{Termodynamiske processor}
+			Idealgasligningen er en ligning, som kan anvendes til at beskrive sammenhængen mellem
+			\textit{tryk}, \textit{volumen}, \textit{stofmængde} og \textit{temperatur} for en ideal 
+			gas og derved dens tilstand. Den kan afbildes rent matematisk som
+			\begin{equation}
+				p \cdot V = n \cdot R \cdot T
+			\end{equation}
+			hvor \(p\) er gassens tryk, \(V\) er gassenes volumen, \(n\) er stofmængden, \(R\) er gaskonstanten
+			og har værdien \(\SI{8.314}{\joule\per (\mole\cdot\kelvin)} \) og \(T\) er temperaturen angivet i 
+			Kelvin. Mere specifikt, som navnet antyder, så gør ligningen sig 
+			gældende for ideale gasser,hvilket betyder, at der antages at gasmolekylerne kolliderer 
+			total elastisk imellem hinanden, altså at der ikke går nogen energi tabt ved sammenstød af 
+			molekyler. Hvis man begynder at ændre på to af de resterende faktorer ved en indespæret gas, 
+			som har en konstant stofmængde, så vil den tredje variable indstille sig, så den overholder
+			idealgasligningen. Denne indstilling fra et stadie til et andet kaldes for en \textit{proces}. 
+			Generelt for alle processorer gælder det, at temperaturen direkte korrelerer til ændringen af 
+			en given gas indre energi, som er et begreb for molekylernes kinetisk energi og indbyrdes 
+			kræfter i gassen. Dette kan illustreres ved
+			\begin{equation}
+				\Delta E_i = n \cdot c_{\text{mV}} \cdot \Delta T
+				\label{eq:2}
+			\end{equation}
+			hvor \(\Delta E_i\) er den indre energi i gassen, \(n\) er stofmængdekoncentrationen i mol, 
+			\(c_{\text{mV}}\) er den specifikke molære varmekapacitet ved et konstant volumen. 
+			
+			\subsubsection{Isokor process} 
+			Hvis en gas indespæret i et kammer med konstant volume oplever en varmetilførsel, så vil 
+			gassens tryk variere alt efter om det er en positiv eller negativ varmetilførsel. En sådan
+			process, hvor volumenet holdes konstant kaldes en \textit{isokor} proces. Netop da gassen
+			holdes i et konstant volumen, så kan gassen ikke udvide sig, så derfor vil gassens arbejde,
+			som kan beskrives ved følgende formel
+			\begin{equation}
+				A = p \cdot \Delta V.
+				\label{eq:3}
+			\end{equation}
+			Idet volumenet er konstant og derved er volumenændringen \(\Delta V\) lig nul, så vil arbejdet
+			også være lig nul, da gassen ikke kan 'skubbe' på omgivelserne ved at udvide sig ligeledes er omgivelsernes arbejde på gassen lig nul.
+			\begin{equation}
+				A = 0
+			\end{equation}
+			Formlen for at beregne den nødvendige mægnde varme, \(Q\), som skal tilføres til gassen under en isokor proces, kan findes ved den tidligere nævnte formel \eqref{eq:2}
+			\begin{equation}
+				Q = n \cdot n_{\text{mV}} \cdot \Delta T
+			\end{equation}
+			
+			\subsubsection{Isobar proces}
+			Forskellen fra en isokor til en isobar process er, som
+			navnet \textit{isobar} godt kunne antyde, at trykket 
+			holdes konstant fremfor volumenet som i det forrige. Ved
+			denne proces kan det udførte arbejde på gassen, altså 
+			omgivelsernes arbejde, findes ved
+			\begin{equation}
+				A = -p \cdot \Delta V
+			\end{equation}
+			som er den samme som ligning \eqref{eq:3} bortset fra at
+			der er introduceret et negativt fortegn. Dette er gjort fordi det er arbejdet fra omgivelserne på gassen, der betragtes. Dette arbejde vil kun være positivt, når gassen komprimeres, idet det vil resultere i en negativ volumetilvækst.  
+			\subsubsection{Isoterm proces}
+			
+			\subsubsection{Adiabatisk proces}
+			
+			\subsection{Kredsprocesser}
+
+\end{document}
