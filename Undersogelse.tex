@@ -14,8 +14,9 @@
 	
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[width=0.5\linewidth]{Billeder/330px-Stirling_Cycle_color.svg}
-		\caption{En idealiseret Stirling motos kredsproces indtegnet i et \(pV\)-diagram. Kilde: \url{https://en.wikipedia.org/wiki/Stirling_engine#/media/File:Stirling_Cycle_color.svg}}
+		\includegraphics[width=0.4\linewidth]{Billeder/330px-Stirling_Cycle_color.svg}
+		\caption{En idealiseret Stirling motos kredsproces indtegnet i et \(pV\)-diagram. Kilde}
+		%kilde: \url{https://en.wikipedia.org/wiki/Stirling_engine#/media/File:Stirling_Cycle_color.svg}
 		\label{fig:stirlingcycle}
 	\end{figure}
 	
@@ -80,6 +81,9 @@
 		Q_{\text{tilført}} = nRT_H\ln\left(\frac{V_2}{V_1}\right)
 		\label{eq:varme}
 	\end{equation}
+	Skriv mere here. Når den ideliserede cyklus når proces \(1 \rightarrow 2\), så sker der en 
+	ekspansion, altså volumenet på gassen bliver større. Derfor skal der tilføres en hvis mængde 
+	energi til gassen for at holde temperaturen i gassen konstant. 
 	\subsubsection{nyttevirkning af en idealiseret Stirling motor}
 	For en kraftvarmemaskine, som Stirling maskinen er dens nyttevirkning defineret som forholdet mellem maskinens arbejde og den tilførte energi. Nytte virkningen kan beregnes ved 
 	\begin{equation}
@@ -105,5 +109,15 @@
 	\end{subequations}
 	så kan det obseveres, at nyttevirkningen for en idealiseret stirling motor aldrig kan overstige 1. 
 	\subsection{Beregning på modellen}
+	Som det fremstod i det forrige, så kan nyttevirkningen for en idealiseret Stirling motor beregnes, hvis man kender den maksimale og minimale temperatur for gassen i kredsprocessen. I EuroDishens anvendes en Stirling motoren SOLO Stirling 161, der produceres af SOLO Kleinmotoren. I databladet for den anvendte Stirling motor fremgår det at den maksimale driftstemperatur er \SI{650}{\celsius}, dog så fremstår den minimale temperatur i databladet. Derfor tages der i det følgende afsæt i en anden Stirling motor, som har en maksimal temperatur på \SI{1054}{\kelvin} og en minimum på \SI{308}{\kelvin}. %kilde: file:///tmp/mozilla_ckl0/ThermalmodelEurodishJSEE.pdf
+	Ud fra disse data, så kan den teoretiske og idealiserede nyttevirkning for denne Stirling motor beregnes med ligning \eqref{eq:nytte}, som resulterer i
+	\begin{equation}
+		\eta_{\text{Stirling}} = \frac{\SI{1054}{\kelvin} - \SI{308}{\kelvin}}{\SI{1054}{\kelvin}} = 0.708 = \SI{70.8}{\percent}
+	\end{equation}
+	Det vil altså sige, at for al energi som tilføres til den idealiserede Stirling maskine, så vil en andel på \(\SI{70.8}{\percent}\) blive omdannet til mekanisk energi. For at EuroDishen kan generer el, så er der koblet en elgenereator på Stirling motoren, som omdanner det mekaniske energi til elektricitet. I det tidligere nævnte datablad, så fremgår virkningsgraden for den anvendte elgenerator og er opgivet til at være \(\eta_{\text{gen}} = \SI{94}{\percent}\). Heraf kan den nyttevirkning fra tilført varmeenergi til elektrisk energi, generede af generatoren, findes ved produktet af disse nyttevirkninger
+	\begin{equation}
+		\eta_{\text{q}\rightarrow\text{el}} =  \eta_{\text{stirling}} \cdot \eta_{\text{gen}} = 0.708 \cdot 0.94 = 0.665 = \SI{66.5}{\percent}
+	\end{equation}
+	Så for den energi, som tilføres til Stirling generatoren via sollys, så vil en andel af \SI{67}{\percent} blive omdannet til elektrisk energi, der kan sendes ud til elnettet. 
 	\subsection{Sammenligning}
 \end{document}
