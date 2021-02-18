@@ -7,7 +7,27 @@
 	på EuroDishen, som omdanner solens energi til mekanisk energi, altså Stirlingmotoren. 
 	
 	\subsection{Analyse af en idealiseret Stirlingmotor}
-	En idealiseret stirling motor er en modelering af....
+	En idealiseret stirling motor er en model, som kan opstilles til en 
+	Stirling motor, hvor der termodynamiske processor sammensættes til en kredsproces. Da 
+	de termodynamiske processor er udledt af idealgaslignigen, så giver det 
+	god mening, at en model opstillet med disse også vil være ideal. Den idealeliseret Stirling motor vil derfor ikke matche en realistisk Stirling Motor. Den idealiserede stirling motors \(pV\)-diagram kan ses på figur \ref{fig:stirlingcycle}
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.5\linewidth]{Billeder/330px-Stirling_Cycle_color.svg}
+		\caption{En idealiseret Stirling motos kredsproces indtegnet i et \(pV\)-diagram. Kilde: \url{https://en.wikipedia.org/wiki/Stirling_engine#/media/File:Stirling_Cycle_color.svg}}
+		\label{fig:stirlingcycle}
+	\end{figure}
+	
+
+	Hvor proces:
+	\begin{enumerate}[]
+		\item \quad \(1 \rightarrow 2\): er en isoterm ekspansion
+		\item \quad \(2 \rightarrow 3\): er en iskor afkøling
+		\item \quad \(3 \rightarrow 4\): er en isoterm kompression
+		\item \quad \(4 \rightarrow 1\): er en isokor opvarmning
+	\end{enumerate}
+	
 	
 	\subsubsection{Arbejde udført af en idealiseret Stirlingmotor}
 	Nettoarbejdet for en idealiseret Stirling motor kan beregnes ved at finde arealet, der afgrænses
@@ -20,7 +40,7 @@
 		A_{\text{netto}} = \int_{V_1}^{V_2} p \, dV - \int_{V_3}^{V_4} p \, dV 
 		\label{eq:1}
 	\end{equation}
-	Selve arbejdet, som en isoterm udfører undervejs, kan findes ved at betrage formel \eqref{eq:1},
+	Selve arbejdet, som en isoterm udfører undervejs, kan findes ved at betrage ligning \eqref{eq:1},
 	idealgasligningen, og huske at for en isoterm proces er temperaturen \(T\) konstant, samt stofmængden \(n\), da det er en kredsproces. Ud fra dette kan et udtryk for det udførte arbejde skrives som
 	\begin{subequations}
 		\begin{align}
@@ -31,8 +51,11 @@
 		\end{align}
 	\end{subequations}
 	hvor \(V_{\text{B}}\) og \(V_{\text{B}}\) er henholdsvis slut- og startvolumenet. Fra trin b til c
-	i formel \eqref{eq:workint} anvendes, at \[\ln(A)-\ln(B) = \ln\left(\frac{A}{B}\right). \]
-	Ved at substituere formel \eqref{eq:workint} i formel \eqref{eq:1}, så kan integralet for 
+	i ligning \eqref{eq:workint} anvendes, at \[\ln(A)-\ln(B) = \ln\left(\frac{A}{B}\right). \]
+	Dette er den samme ligning, som blev introduceret i redegørelse, navnligt ligning \eqref{eq:10},
+	den eneste forskel er fortegnet. I redegørelsen var det arbejdet, som omgivelserne skulle udføre
+	på gassen, hvorimod det her er gassens arbejde. 
+	Ved at substituere ligning \eqref{eq:workint} i ligning \eqref{eq:1}, så kan integralet for 
 	nettoarbejdet evalueres på følgende vis
 	\begin{equation}
 		A_{\text{netto}} = nRT_H\ln\left(\frac{V_2}{V_1}\right)-nRT_L\ln\left(\frac{V_3}{V_4}\right)
@@ -48,8 +71,39 @@
 		A_{\text{netto}}= nR\ln\left(\frac{V_2}{V_1}\right)\cdot (T_H - T_L)
 		\label{eq:arbejde}
 	\end{equation}
-	Så arbejdet, som udføres på omgivelserne, af en idealiseret Stirling motor kan beregnes ved anvendelse af formel \eqref{eq:arbejde}
+	Så arbejdet, som udføres på omgivelserne, af en idealiseret Stirling motor kan beregnes ved anvendelse af ligning \eqref{eq:arbejde}
 	kilde \footnote{pdf, plus bog}
+	
+	\subsubsection{Tilførsel af varme til systemet}
+	Varmen, \(Q\), som skal tilføres til gassen i kredsprocessen kan udledes ud fra ligning
+	\begin{equation}
+		Q_{\text{tilført}} = nRT_H\ln\left(\frac{V_2}{V_1}\right)
+		\label{eq:varme}
+	\end{equation}
+	\subsubsection{nyttevirkning af en idealiseret Stirling motor}
+	For en kraftvarmemaskine, som Stirling maskinen er dens nyttevirkning defineret som forholdet mellem maskinens arbejde og den tilførte energi. Nytte virkningen kan beregnes ved 
+	\begin{equation}
+		\eta = \frac{A_{\text{maskine}}}{Q_{\text{tilført}}}
+		\label{eq:nyttevirkning}
+	\end{equation}
+	hvor \(A_{\text{maskine}}\) er maskinens arbejde og \(Q_{\text{tilført}}\) e varmen, der tilføres maskinen undervejs. For en idealiseret Stirling motor, så kan nyttevirkningen udregnes ved at indsææte ligning \eqref{eq:arbejde} og \eqref{eq:varme} i ligning \eqref{eq:nyttevirkning}, som resulterer i
+	\begin{equation}
+		\eta = \frac{nR\ln\left(\frac{V_2}{V_1}\right)\cdot (T_H - T_L)}{nRT_H\ln\left(\frac{V_2}{V_1}\right)} 
+	\end{equation}
+	Her kan det let ses, at \(nR\ln\left(\frac{V_2}{V_1}\right)\) i tæller og nævner vil udligne hinanden og så kan nyttevirkningen nu beregnes med
+	\begin{equation}
+		\eta = \frac{T_H-T_L}{T_H}
+		\label{eq:nytte}
+	\end{equation}
+	Heraf kan det ses, at nyttevirkningen af en idealiseret stirling motor udelukkende afhænger af den højeste og laveste temperatur. Ved at omskrive ligning \eqref{eq:nytte} som følgende
+	\begin{subequations}
+		\begin{align}
+			\eta &= \frac{T_H-T_L}{T_H} \\
+			 	 &= \frac{T_H}{T_H}-\frac{T_L}{T_H} \\
+			 	 &= 1 -\frac{T_L}{T_H}
+		\end{align}
+	\end{subequations}
+	så kan det obseveres, at nyttevirkningen for en idealiseret stirling motor aldrig kan overstige 1. 
 	\subsection{Beregning på modellen}
 	\subsection{Sammenligning}
 \end{document}
