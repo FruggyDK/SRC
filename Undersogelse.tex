@@ -1,7 +1,55 @@
 \documentclass[SRC.tex]{subfiles}
 
 \begin{document}
-	\subsection{Opstilling af matematisk model}
+	
+	For at kunne regne på, hvor effektiv en EuroDish er, så er det nødvendigt at opstille
+	en matematisk model, som der kan regnes på. En sådan model, tager afsæt i selve den del
+	på EuroDishen, som omdanner solens energi til mekanisk energi, altså Stirlingmotoren. 
+	
+	\subsection{Analyse af en idealiseret Stirlingmotor}
+	En idealiseret stirling motor er en modelering af....
+	
+	\subsubsection{Arbejde udført af en idealiseret Stirlingmotor}
+	Nettoarbejdet for en idealiseret Stirling motor kan beregnes ved at finde arealet, der afgrænses
+	af de termodynamiske processor  i \(pV\)-diagrammet. Der udføreres kun et arbejde ved 
+	proces \(1\rightarrow2\), altså den isoterme ekspansion og ved den proces \(3 \rightarrow 4\), 
+	den isoterme kompression. Arbejdet for en isoterm proces kan opfattes, som araelet under den 
+	afbillede graf i diagrammet. Derfor må nettoarbejdet være lig med forskellen på den øverste
+	process og den nederste process, som rent matematisk kan udregnes som
+	\begin{equation}
+		A_{\text{netto}} = \int_{V_1}^{V_2} p \, dV - \int_{V_3}^{V_4} p \, dV 
+		\label{eq:1}
+	\end{equation}
+	Selve arbejdet, som en isoterm udfører undervejs, kan findes ved at betrage formel \eqref{eq:1},
+	idealgasligningen, og huske at for en isoterm proces er temperaturen \(T\) konstant, samt stofmængden \(n\), da det er en kredsproces. Ud fra dette kan et udtryk for det udførte arbejde skrives som
+	\begin{subequations}
+		\begin{align}
+		\int_{V_A}^{V_B} p \, dV &= \int_{V_A}^{V_B} \frac{nRT}{V} \, dV  = nRT \cdot 	\int_{V_A}^{V_B} \frac{1}{V}\, dV \\
+		&= nRT \cdot \left[\ln V\right]_{V_A}^{V_B}  = nRT \cdot (\ln V_\text{B} - \ln V_\text{A})\\
+		&=nRT \ln\left(\frac{V_B}{V_A}\right)
+		\label{eq:workint}
+		\end{align}
+	\end{subequations}
+	hvor \(V_{\text{B}}\) og \(V_{\text{B}}\) er henholdsvis slut- og startvolumenet. Fra trin b til c
+	i formel \eqref{eq:workint} anvendes, at \[\ln(A)-\ln(B) = \ln\left(\frac{A}{B}\right). \]
+	Ved at substituere formel \eqref{eq:workint} i formel \eqref{eq:1}, så kan integralet for 
+	nettoarbejdet evalueres på følgende vis
+	\begin{equation}
+		A_{\text{netto}} = nRT_H\ln\left(\frac{V_2}{V_1}\right)-nRT_L\ln\left(\frac{V_3}{V_4}\right)
+	\end{equation}
+	hvor subskriftene \(H\) og \(L\) denoterer henholdsvis den høje og lave temperatur i den isoterme
+	proces. Ved at obsevere \(pV\)-diagrammet (indsæt figur), så kan det ses at \(V_4 = V_1\) samt 
+	at \(V_3 = V_2\), netop da to lodrette processor er isokore processor, hvor volumenet holdes konstant. Herved kan ligningen omskrives til
+	\begin{equation}
+	A_{\text{netto}} = nRT_H\ln\left(\frac{V_2}{V_1}\right)-nRT_L\ln\left(\frac{V_2}{V_1}\right)
+	\end{equation}
+	Ved at faktorisere kan udtrykket skrives som
+	\begin{equation}
+		A_{\text{netto}}= nR\ln\left(\frac{V_2}{V_1}\right)\cdot (T_H - T_L)
+		\label{eq:arbejde}
+	\end{equation}
+	Så arbejdet, som udføres på omgivelserne, af en idealiseret Stirling motor kan beregnes ved anvendelse af formel \eqref{eq:arbejde}
+	kilde \footnote{pdf, plus bog}
 	\subsection{Beregning på modellen}
 	\subsection{Sammenligning}
 \end{document}
