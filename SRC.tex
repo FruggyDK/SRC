@@ -11,9 +11,7 @@
 \usepackage{hyperref}
 \usepackage{enumerate}
 \usepackage{subfiles}
-\usepackage{subfigure}
 \usepackage{caption}
-\usepackage{harvard}
 \hypersetup{%
 	pdfborder = {0 0 0}
 }
@@ -26,7 +24,15 @@
 
 \author{Christian Kaae Larsen}
 \begin{document}
+	\subfile{Forside}
+	
+	\subfile{Titelblad}
+	
+	\newpage
+	
 	\tableofcontents
+	
+	\newpage
 	
 	\begin{abstract}
 		dsdsdshaudhausdhdsdsdshaudhausdhdsdsdshaudhausdhdsdsdshaudhausdh
@@ -41,8 +47,8 @@
 	\section{Problemformulering}
 	\subfile{problemformulering}
 	
-	\section{Metodeafsnit} %undersøg navne konvention.
-	\subfile{Metodeafsnit}
+	%\section{Metodeafsnit} %undersøg navne konvention.
+	%\subfile{Metodeafsnit}
 	
 	\section{Termodynamiske processor og kredsprocessor}
 	\subfile{Redegorelse}
@@ -60,8 +66,10 @@
 	\section{Referencer}
 	\subfile{Referencer}
 		
-	%\section{Bilag}
-	%\subfile{Bilag}
+	\newpage
+		
+	\section{Bilag}
+	\subfile{Bilag}
 	
 	
 	

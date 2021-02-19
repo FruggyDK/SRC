@@ -3,14 +3,14 @@
 \begin{document}
 	
 	For at kunne regne på, hvor effektiv en EuroDish er, så er det nødvendigt at opstille
-	en matematisk model, som der kan regnes på. En sådan model, tager afsæt i selve den del
+	en matematisk model, som der kan regnes på. En sådan model tager afsæt i selve den del
 	på EuroDishen, som omdanner solens energi til mekanisk energi, altså Stirlingmotoren. 
 	
 	\subsection{Analyse af en idealiseret Stirlingmotor}
 	En idealiseret stirling motor er en model, som kan opstilles til en 
-	Stirling motor, hvor der termodynamiske processor sammensættes til en kredsproces. Da 
-	de termodynamiske processor er udledt af idealgaslignigen, så giver det 
-	god mening, at en model opstillet med disse også vil være ideal. Den idealeliseret Stirling motor vil derfor ikke matche en realistisk Stirling Motor. Den idealiserede stirling motors \(pV\)-diagram kan ses på figur \ref{fig:stirlingcycle}
+	Stirling motor, hvor de termodynamiske processorer sammensættes til en kredsproces. Da 
+	de termodynamiske processorer er udledt af idealgaslignigen, så giver det 
+	god mening, at en model opstillet med disse også vil være ideal. Den idealeliserede Stirling motor vil derfor ikke matche en realistisk Stirling Motor. Den idealiserede stirling motors \(pV\)-diagram kan ses på figur \ref{fig:stirlingcycle}
 	
 	\begin{figure}[h!]
 		\centering
@@ -34,7 +34,7 @@
 	Nettoarbejdet for en idealiseret Stirling motor kan beregnes ved at finde arealet, der afgrænses
 	af de termodynamiske processor  i \(pV\)-diagrammet. Der udføreres kun et arbejde ved 
 	proces \(1\rightarrow2\), altså den isoterme ekspansion og ved den proces \(3 \rightarrow 4\), 
-	den isoterme kompression. Arbejdet for en isoterm proces kan opfattes, som araelet under den 
+	den isoterme kompression. Arbejdet for en isoterm proces kan opfattes som araelet under den 
 	afbillede graf i diagrammet. Derfor må nettoarbejdet være lig med forskellen på den øverste
 	process og den nederste process, som rent matematisk kan udregnes som
 	\begin{equation}
@@ -51,7 +51,7 @@
 		\label{eq:workint}
 		\end{align}
 	\end{subequations}
-	hvor \(V_{\text{B}}\) og \(V_{\text{B}}\) er henholdsvis slut- og startvolumenet. Fra trin b til c
+	hvor \(V_{\text{B}}\) og \(V_{\text{A}}\) er henholdsvis slut- og startvolumenet. Fra trin b til c
 	i ligning \eqref{eq:workint} anvendes, at \[\ln(A)-\ln(B) = \ln\left(\frac{A}{B}\right). \]
 	Dette er den samme ligning, som blev introduceret i redegørelse, navnligt ligning \eqref{eq:10},
 	den eneste forskel er fortegnet. I redegørelsen var det arbejdet, som omgivelserne skulle udføre
@@ -63,7 +63,7 @@
 	\end{equation}
 	hvor subskriftene \(H\) og \(L\) denoterer henholdsvis den høje og lave temperatur i den isoterme
 	proces. Ved at obsevere \(pV\)-diagrammet på figur \ref{fig:stirlingcycle}, så kan det ses at \(V_4 = V_1\) samt 
-	at \(V_3 = V_2\), netop da to lodrette processor er isokore processor, hvor volumenet holdes konstant. Herved kan ligningen omskrives til
+	at \(V_3 = V_2\), netop da to lodrette processor, er isokore processor, hvor volumenet holdes konstant. Herved kan ligningen omskrives til
 	\begin{equation}
 	A_{\text{netto}} = nRT_H\ln\left(\frac{V_2}{V_1}\right)-nRT_L\ln\left(\frac{V_2}{V_1}\right)
 	\end{equation}
@@ -72,7 +72,7 @@
 		A_{\text{netto}}= nR\ln\left(\frac{V_2}{V_1}\right)\cdot (T_H - T_L)
 		\label{eq:arbejde}
 	\end{equation}
-	Så arbejdet, som udføres på omgivelserne, af en idealiseret Stirling motor kan beregnes ved anvendelse af ligning \eqref{eq:arbejde}.
+	Så arbejdet, som udføres på omgivelserne af en idealiseret Stirling motor kan beregnes ved anvendelse af ligning \eqref{eq:arbejde}.
 	(Haywood) (Holck og Kraaer, 2009) 
 	
 	\subsubsection{Tilførsel af varme til systemet}
@@ -85,8 +85,8 @@
 	\end{equation}
 	(Holck og Kraaer, 2009) 
 	 
-	\subsubsection{nyttevirkning af en idealiseret Stirling motor}
-	For en kraftvarmemaskine, som Stirling maskinen er dens nyttevirkning defineret som forholdet mellem maskinens arbejde og den tilførte energi. Nytte virkningen kan beregnes ved 
+	\subsubsection{Nyttevirkning af en idealiseret Stirling motor}
+	For en kraftvarmemaskine, som Stirling maskinen, er dens nyttevirkning defineret som forholdet mellem maskinens arbejde og den tilførte energi. Nyttevirkningen kan beregnes ved 
 	\begin{equation}
 		\eta = \frac{A_{\text{maskine}}}{Q_{\text{tilført}}}
 		\label{eq:nyttevirkning}
@@ -111,24 +111,24 @@
 	så kan det obseveres, at nyttevirkningen for en idealiseret stirling motor aldrig kan overstige 1.
 	(Holck og Kraaer, 2009)​(Haywood) 
 	\subsection{Beregning på modellen}
-	Som det fremstod i det forrige, så kan nyttevirkningen for en idealiseret Stirling motor beregnes, hvis man kender den maksimale og minimale temperatur for gassen i kredsprocessen. I EuroDishens anvendes en Stirling motoren SOLO Stirling 161, der produceres af SOLO Kleinmotoren Schiel og Laing, 2015) . I databladet for den anvendte Stirling motor fremgår det at den maksimale driftstemperatur er \SI{650}{\celsius}, dog så fremstår den minimale temperatur i databladet (SOLO Stirling) . Derfor tages der i det følgende afsæt i en anden Stirling motor, som har en maksimal temperatur på \SI{1054}{\kelvin} og en minimum på \SI{308}{\kelvin} (Granados, 2014) . 
+	Som det fremstod i det forrige, så kan nyttevirkningen for en idealiseret Stirling motor beregnes, hvis man kender den maksimale og minimale temperatur for gassen i kredsprocessen. I EuroDishen anvendes Stirling motoren, SOLO Stirling 161, der produceres af SOLO Kleinmotoren (Schiel og Laing, 2015) . I databladet for den anvendte Stirling motor fremgår det, at den maksimale driftstemperatur er \SI{650}{\celsius}, dog så fremgår den minimale temperatur ikke i databladet (SOLO Stirling) . Derfor tages der i det følgende afsæt i en anden Stirling motor, som har en maksimal temperatur på \SI{1054}{\kelvin} og en minimum på \SI{308}{\kelvin} (Granados, 2014) . 
 	Ud fra disse data, så kan den teoretiske og idealiserede nyttevirkning for denne Stirling motor beregnes med ligning \eqref{eq:nytte}, som resulterer i
 	\begin{equation}
 		\eta_{\text{Stirling}} = \frac{\SI{1054}{\kelvin} - \SI{308}{\kelvin}}{\SI{1054}{\kelvin}} = 0.708 = \SI{70.8}{\percent}
 	\end{equation}
-	Det vil altså sige, at for al energi som tilføres til den idealiserede Stirling maskine, så vil en andel på \(\SI{70.8}{\percent}\) blive omdannet til mekanisk energi. For at udvide modellen til hele EuroDishen og ikke kun Stirling motoren, så kan der tilføres noget data der gør modellen mere virkelighedsnær. For at EuroDish kan generer el, så er der koblet en elgenereator på Stirling motoren, som omdanner det mekaniske energi til elektricitet. I det tidligere nævnte datablad, så fremgår virkningsgraden for den anvendte elgenerator og er opgivet til at være \(\eta_{\text{gen}} = \SI{94}{\percent}\). Heraf kan den nyttevirkning fra tilført varmeenergi til elektrisk energi, generede af generatoren, findes ved produktet af disse nyttevirkninger
+	Det vil altså sige, at for al energi som tilføres til den idealiserede Stirling maskine, så vil en andel på \(\SI{70.8}{\percent}\) blive omdannet til mekanisk energi. For at udvide modellen til hele EuroDishen og ikke kun Stirling motoren, så kan der tilføres noget data, der gør modellen mere virkelighedsnær. For at en EuroDish kan generere el, så er der koblet en elgenereator på Stirling motoren, som omdanner det mekaniske energi til elektricitet. I det tidligere nævnte datablad, så fremgår virkningsgraden for den anvendte elgenerator, og er opgivet til at være \(\eta_{\text{gen}} = \SI{94}{\percent}\). Heraf kan den nyttevirkning fra tilført varmeenergi til elektrisk energi, genereret af generatoren, findes ved produktet af disse nyttevirkninger
 	\begin{equation}
 		\eta_{\text{q}\rightarrow\text{el}} =  \eta_{\text{stirling}} \cdot \eta_{\text{gen}} = 0.708 \cdot 0.94 = 0.665 = \SI{66.5}{\percent}
 		\label{eq:31}
 	\end{equation}
-	Så for den energi, som tilføres til Stirling generatoren via sollys, så vil en andel af \SI{67}{\percent} blive omdannet til elektrisk energi, der kan sendes ud til elnettet. Ligeledes kan der introduceres en faktor \(r\) om refleksiviteten af spejlene, som reflektere solen lys til Stirling Motoren i brændpunktet. Det er ikke alt lyset, som reflekteres af spejlene, ved at tilgå det tidligere nævnte datablad, så kan det ses at der spejlene reflektere \SI{97}{\percent} af det indgående sollys Schiel og Laing, 2015) . Det reflekterede sollys modtages af en såkaldt 'reciever', som sidder på Stirling motoren og overfører varmen dertil. Ved denne introduceres også et tab af energi, nemlig da den har en nyttevirkning, \(\eta_{\text{reciever}} = \SI{90}{\percent}\). Så kan refleksivitens fakor, \(r\) og nyttevirkningen af recieveren, ganges på ligning \eqref{eq:31}, heraf fås en mere præcist model af EuroDishens nyttevirknig.
+	Så for den energi, som tilføres til Stirling generatoren via sollys, vil en andel af \SI{67}{\percent} blive omdannet til elektrisk energi, der kan sendes ud til elnettet. Ligeledes kan der introduceres en faktor \(r\) om refleksiviteten af spejlene, som reflektere solen lys til Stirling Motoren i brændpunktet. Det er ikke alt lyset, som reflekteres af spejlene, hvilket ses ved at tilgå det tidligere nævnte datablad. Så kan det ses, at spejlene reflekterer \SI{97}{\percent} af det indgående sollys (Schiel og Laing, 2015) . Det reflekterede sollys modtages af en såkaldt 'reciever', som sidder på Stirling motoren og overfører varmen dertil. Ved denne introduceres også et tab af energi, nemlig da den har en nyttevirkning, \(\eta_{\text{reciever}} = \SI{90}{\percent}\). Så kan refleksivitens fakor, \(r\) og nyttevirkningen af recieveren ganges på ligning \eqref{eq:31}. Heraf fås en mere præcis model af EuroDishens nyttevirknig.
 	\begin{equation}
 		\eta_{\text{eurodish}} = \eta_{\text{q}\rightarrow\text{el}} \cdot r \cdot \eta_{\text{reciever}}  = 0.665 \cdot 0.97 \cdot 0.90 = 0.58 = \SI{58}{\percent}
 	\end{equation} 
 	Så af al ingående solenergi, så vil, efter denne model, \SI{58}{\percent} af energien blive omdannet til elektricitet. 
 	\subsection{Sammenligning}
-	De største indenfor anvendelsen af solenergi er solcellerne. En Mono-krystallinske solceller har en nyttevirkning på 22-\SI{27}{\percent} (Vourvoulias, 2021).
+	De største indenfor anvendelsen af solenergi er solcellerne. Mono-krystallinske solceller har en nyttevirkning på 22-\SI{27}{\percent} (Vourvoulias, 2021).
 	Den opstillede model for EuroDishen fremsætter, at den har en nyttevirkning på \SI{58}{\percent} 
-	og dermed omdanner lidt over dobbelt så meget, som solcellerne eller rettere sagt solpanelerne. 
+	og dermed omdanner den lidt over dobbelt så meget, som solcellerne eller rettere sagt solpanelerne og dermed en EuroDish modellen præsenteret i dette projekt mere effektiv end solpanelerne. 
 
 \end{document}
